@@ -337,7 +337,6 @@ var handsonTable = {
             },
             beforeRender: function() {
               $('#handsontable td.changeInput').each(function(){
-                  alert('Hola');
                   console.log('Nearest TR: ' + $(this).closest('tr').index()); 
               });
             },
