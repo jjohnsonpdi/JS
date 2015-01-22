@@ -337,17 +337,20 @@ var handsonTable = {
               //alert(index);
             },
             beforeRender: function() {
-               /* totalColWithBG = [];
+               totalColWithBG = [];
               $('#handsontable td.changeInput').each(function(){
-                  totalColWithBG.push('Nearest TR: ' + $(this).closest('tr').index()); 
+                totalColWithBG.push($(this).closest('tr').find('td:last-child').text()); 
               });
-                  totalColWithBG = totalColWithBG.filter (function (v, i, a) { return a.indexOf (v) == i }); */
+              totalColWithBG = totalColWithBG.filter (function (v, i, a) { return a.indexOf (v) == i });
             },
             afterRender: function() {
                if (typeof totalColWithBG !== 'undefined' || totalColWithBG.length > 0) {
-                   for (var i=0; i<totalColWithBG.length; i++) {
+                   if (isDelete == true) {
+                     for (var i=0; i<totalColWithBG.length; i++) {
                        //$('#handsontable td')
+                     }  
                    }
+                   
                }
               //$('#handsontable td').each(function(){
                // if ($(this).hasClass('changeInput')) { $(this).css('color', 'green'); }
@@ -580,10 +583,7 @@ var handsonTable = {
                       $("#P10_TASK_SELECT").trigger('change');
                                             isDelete = true;
                                             totalColWithBG = [];
-                                            $('#handsontable td.changeInput').each(function(){
-                                                totalColWithBG.push('Nearest TR: ' + $(this).closest('tr').find('td:last-child').text()); 
-                                            });
-                                            totalColWithBG = totalColWithBG.filter (function (v, i, a) { return a.indexOf (v) == i });
+                                            
                                             console.log(totalColWithBG);
                                             //alert(TotalCheckedLength);
                                             //renderBG = ($('#handsontable').data('handsontable').countRows() - 1) - TotalCheckedLength;
