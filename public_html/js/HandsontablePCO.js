@@ -346,12 +346,12 @@ var handsonTable = {
             afterRender: function() {
                if (typeof totalColWithBG !== 'undefined' || totalColWithBG.length > 0) {
                    for (var i=0; i<totalColWithBG.length; i++) {
-                       $('#handsontable td')
+                       //$('#handsontable td')
                    }
                }
-              $('#handsontable td').each(function(){
-                if ($(this).hasClass('changeInput')) { $(this).css('color', 'green'); }
-              });
+              //$('#handsontable td').each(function(){
+               // if ($(this).hasClass('changeInput')) { $(this).css('color', 'green'); }
+              //});
               //alert($('#handsontable').data('handsontable').countRows());
               //renderBG = $('#handsontable').data('handsontable').countRows();
             },
