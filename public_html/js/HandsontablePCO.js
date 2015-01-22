@@ -342,6 +342,7 @@ var handsonTable = {
                 totalColWithBG.push($(this).closest('tr').find('td:last-child').text()); 
               });
               totalColWithBG = totalColWithBG.filter (function (v, i, a) { return a.indexOf (v) == i });
+              console.log(totalColWithBG);
             },
             afterRender: function() {
                if (typeof totalColWithBG !== 'undefined' || totalColWithBG.length > 0) {
